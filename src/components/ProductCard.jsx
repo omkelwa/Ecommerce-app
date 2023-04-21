@@ -3,9 +3,9 @@ import { add } from "../store/cart/cartSlice"
 
 function Product({product}) {
 const {title , price , image} = product
-const {dispach} = useDispatch()
+const dispatch = useDispatch()
 const handleAdd = (product)=>{
-  dispach(add(product))
+  dispatch(add(product))
 }
 
   return (
