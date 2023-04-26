@@ -329,6 +329,9 @@ button:hover{
         margin-top: 10px;
     }
 
+    .cart-item span h3 .decrement{
+        margin: 100px;
+    }
     .cart-item{
         padding: 20px;
         height: auto;

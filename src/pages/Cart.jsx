@@ -6,7 +6,7 @@ function Cart() {
   const cartProducts = useSelector(state => state.cart)
   
   const totalPrice = cartProducts.reduce((p , c)=>{
-    return p + c.price
+    return p + c.price * c.cartQuantity
   },0)
   return (
     <>
@@ -18,7 +18,7 @@ function Cart() {
         </div>
         <div className="bill-section">
           <h1>
-            Total Amount : <br /> <br /> ${totalPrice}
+            Total Amount : <br /> <br /> ${totalPrice.toFixed(2)}
           </h1>
           <button className="pay-btn">Pay Now</button>
         </div>
